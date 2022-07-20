@@ -2,6 +2,14 @@ package main
 
 import "testing"
 
+func TestDayOfProgrammer_OutsideJulianGregorianCalender(t *testing.T) {
+	expectation := "Year outside Julian and Gregorian Calender"
+	actual := dayOfProgrammer(2701)
+	if actual != expectation {
+		t.Errorf("Expected %v but got %v", expectation, actual)
+	}
+}
+
 func TestDayOfProgrammer_WithGregorianCalenderNotLeapYear(t *testing.T) {
 	expectation := "13.09.2017"
 	actual := dayOfProgrammer(2017)
