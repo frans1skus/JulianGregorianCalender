@@ -8,6 +8,12 @@ import (
 func dayOfProgrammer(year int) string {
 	totalDays := 215 //exclude feb
 	programmerDays := 256
+	startYear := 1700
+	endYear := 2700
+	if year < startYear || year > endYear {
+		return "Year outside Julian and Gregorian Calender"
+	}
+	
 	if year < 1919 {
 		if year%4 == 0 {
 			totalDays += 29
